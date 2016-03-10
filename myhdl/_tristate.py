@@ -23,7 +23,7 @@ class _Tristate(_Signal):
             
     def __init__(self, val):
         self._drivers = []
-        super(Tristate, self).__init__(val)
+        super(_Tristate, self).__init__(val)
         self._val = None
 
     def driver(self):
@@ -44,7 +44,7 @@ class _Tristate(_Signal):
 
     def _update(self):
         self._resolve()
-        return super(Tristate, self)._update()
+        return super(_Tristate, self)._update()
 
 
 class _TristateDriver(_Signal):
